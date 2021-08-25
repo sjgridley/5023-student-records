@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Enter student marks</h2>
+<form method="POST" class="pure-form pure-form-stacked">
+    <label for="student_name">Student name:</label>
+    <input type="text" name="student_name" id="student_name" />
+
+    <h3>Subjects</h3>
+
+    <label for="english_mark">English mark:</label>
+    <input type="number" name="english_mark" id="english_mark" />
+
+    <label for="science_mark">Science mark:</label>
+    <input type="number" name="science_mark" id="science_mark" />
+
+    <!-- TODO: Add label and input for mathematics mark field -->
+
+    <h3>Behaviours</h3>
+
+    <label for="does_homework" class="pure-checkbox">
+        Does homework:
+        <input type="checkbox" name="does_homework" id="does_homework" />
+    </label>
+    
+    <!-- TODO: Add label and input for stays_on_task field -->
+    
+
+    <br>
+    <input type="submit" class="pure-button pure-button-primary" value="Add student" />
+
+</form>
+{% endblock %}

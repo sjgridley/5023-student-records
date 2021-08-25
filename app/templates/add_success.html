@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Student added</h2>
+<p>
+    Successfully added the marks and behaviours for <b>{{ student.name }}</b> to the file.
+</p>
+<p>
+    <a href="{{ url_for('index') }}">Return to list of students</a>.
+</p>
+<h3>Student details:</h3>
+<ul>
+    <li>English: {{ student.english_mark }}</li>
+    <li>Science: {{ student.science_mark }}</li>
+    <!-- TODO: Add list item for Mathematics mark -->
+    <li>Does homework?: {% if student.does_homework %} Yes {% else %} No {% endif %}</li>
+    <!-- TODO: Add list item to indicate whether student stays on task (Yes or No) -->
+</ul>
+{% endblock %}
