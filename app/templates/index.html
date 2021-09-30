@@ -7,9 +7,9 @@
             <th>Name</th>
             <th>English</th>
             <th>Science</th>
-            <!-- TODO: Add heading for Mathematics mark -->
+            <th>Mathematics</th>
             <th>Does homework?</th>
-            <!-- TODO: Add heading for Stays on Task indicator -->
+            <th>Stays on task?</th>
         </tr>
     </thead>
     <tbody>
@@ -18,7 +18,7 @@
             <td>{{ student.name }}</td>
             <td>{{ student.english_mark }}</td>
             <td>{{ student.science_mark }}</td>
-            <!-- TODO: Add cell to the table for the mathematics_mark field -->
+            <td>{{ student.mathematics_mark }}</td>
             <td>
                 {% if student.does_homework %}
                     {% if student.does_homework == 'True' %}
@@ -28,7 +28,15 @@
                     {% endif %}
                 {% endif %}
             </td>
-            <!-- TODO: Add cell to the table for the stays_on_task field -->
+            <td>
+                {% if student.stays_on_task %}
+                    {% if student.stays_on_task == 'True' %}
+                    Yes
+                    {% else %}
+                    No
+                    {% endif %}
+                {% endif %}
+            </td>
         </tr>
         {% endfor %}
     </tbody>
