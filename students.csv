@@ -1,3 +1,4 @@
-name,english_mark,science_mark,does_homework
-Jack,90,90,True
-Dom,80,80,False
+name,english_mark,science_mark,mathematics_mark,does_homework,stays_on_task
+Jack,90,90,90,True,True
+Dom,80,80,80,False,False
+Sally,100,100,100,True,False
